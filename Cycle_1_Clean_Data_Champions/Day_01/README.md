@@ -37,9 +37,4 @@
 
 ---
 
-## 🚀 Next Steps
-- Day 2 will dive deeper into stress signals with more advanced EDA.
-- All code and outputs are committed to this repo for tracking progress.
-
----
 
