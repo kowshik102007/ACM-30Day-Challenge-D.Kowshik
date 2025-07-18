@@ -1,20 +1,3 @@
-### 🧰 Tools & Libraries Used
-
-| Task                     | Tools / Libraries                          |
-|--------------------------|--------------------------------------------|
-| Data Cleaning            | `pandas`, `numpy`, `matplotlib`, `seaborn` |
-| Missing Value Handling   | `pandas`                                   |
-| Outlier Detection        | `IQR`, `matplotlib`, `seaborn`             |
-| Encoding Categorical Data| `LabelEncoder`, `pandas`                   |
-
----
-
-## 📊 Dataset Used
-
-- **Mental Health and Burnout in the Workplace** – Kaggle  
-  [https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace](https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace)
-
----
 
 ### Case File #001 – Burnout Breakdown (Day 1)
 **Focus**: Data Cleaning + Exploratory Data Analysis (EDA)
@@ -31,8 +14,26 @@
 - Calculated `HoursPerDay` to check work hours and applied the IQR method to handle outliers, printing the number removed (0 in this case).
 - Generated the scatter plot with `seaborn` to visualize relationships, adding labels and a legend for clarity.
 
+## 📊 Dataset Used
+
+- **Mental Health and Burnout in the Workplace** – Kaggle  
+  [https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace](https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace)
+
+---
+
+### 🧰 Tools & Libraries Used
+
+| Task                     | Tools / Libraries                          |
+|--------------------------|--------------------------------------------|
+| Data Cleaning            | `pandas`, `numpy`, `matplotlib`, `seaborn` |
+| Missing Value Handling   | `pandas`                                   |
+| Outlier Detection        | `IQR`, `matplotlib`, `seaborn`             |
+| Encoding Categorical Data| `LabelEncoder`, `pandas`                   |
+
+---
+
 #### Files:
-- `Day_01_Burnout_Breakdown.ipynb`: Jupyter notebook with code and visualizations.
+- [`Day_01_Burnout_Breakdown.ipynb`](./Day_01_Burnout_Breakdown.ipynb): Jupyter notebook with code and visualizations.
 - `mental_health_workplace_survey.csv`: Cleaned dataset
 
 ---
