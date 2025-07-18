@@ -33,7 +33,7 @@
 ---
 
 #### Files:
-- [`Day_01_Burnout_Breakdown.ipynb`](./Day_01_Burnout_Breakdown.ipynb): Jupyter notebook with code and visualizations.
+- `Day_01_Burnout_Breakdown.ipynb`: Jupyter notebook with code and visualizations.
 - `mental_health_workplace_survey.csv`: Cleaned dataset
 
 ---
