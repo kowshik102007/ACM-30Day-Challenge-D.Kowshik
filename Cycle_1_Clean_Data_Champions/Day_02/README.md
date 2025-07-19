@@ -37,7 +37,9 @@
 
 #### Files:
 - `Day_02_Feature_Forge.ipynb`: Jupyter notebook with code and results.
- `Summary`: **Model Training + Scores**:
+  
+#### Summary: 
+**Model Training + Scores**:
   - Linear: MSE = 0.83, R² = 0.88
   - Ridge: MSE = 0.83, R² = 0.88
   - Lasso: MSE = 2.17, R² = 0.70
