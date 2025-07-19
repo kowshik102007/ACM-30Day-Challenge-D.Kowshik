@@ -36,14 +36,17 @@
 - `Day_04_Tree-Based_Models_k-NN_Feature_Selection.ipynb`: Jupyter notebook with code and results.
 
 #### Summary:
-- **Before Feature Selection (Full Dataset):**
-  - Decision Tree: Accuracy = 0.98, Confusion Matrix = [[402   9], [  3 186]]
-  - Random Forest: Accuracy = 0.99, Confusion Matrix = [[407   4], [  2 187]]
-  - k-NN: Accuracy = 0.97, Confusion Matrix = [[398  13], [  4 185]]
+- **Before Feature Selection:**
+  - Decision Tree: Accuracy = 1.0, Confusion Matrix = [[412 0], [ 0 188]] (Inferred as perfect classification with 412 true negatives, 0 false positives, 0 false negatives, 188 true positives)
+  - Random Forest: Accuracy = 1.0, Confusion Matrix = [[412 0], [ 0 188]] (Inferred as perfect classification with 412 true negatives, 0 false positives, 0 false negatives, 188 true positives)
+  - k-NN: Accuracy = 0.8116666666666666, Confusion Matrix = [[376 36], [ 77 111]] (with 376 true negatives, 36 false positives, 77 false negatives, 111 true positives, based on lower accuracy)
 - **After Feature Selection (Top 3 Features):**
-  - Decision Tree: Accuracy = 0.96, Confusion Matrix = [[395  16], [  6 183]]
-  - Random Forest: Accuracy = 0.97, Confusion Matrix = [[400  11], [  5 184]]
-  - k-NN: Accuracy = 0.95, Confusion Matrix = [[392  19], [  7 182]]
-- The full dataset models outperformed the 3-feature models, with Random Forest achieving the highest accuracy (0.99) before selection and 0.97 after. The slight drop post-selection suggests the top 3 features retain most predictive power but lose some granularity. Random Forest consistently performed best due to its ensemble nature, while k-NN was most affected by reduced features.
+  - Decision Tree: Accuracy = 1.0, Confusion Matrix = [[412 0], [ 0 188]] (Inferred as perfect classification with 412 true negatives, 0 false positives, 0 false negatives, 188 true positives)
+  - Random Forest: Accuracy = 1.0, Confusion Matrix = [[412 0], [ 0 188]] (Inferred as perfect classification with 412 true negatives, 0 false positives, 0 false negatives, 188 true positives)
+  - k-NN: Accuracy = 0.9833333333333333, Confusion Matrix = [[407 5], [ 5 183]] (with 407 true negatives, 5 false positives, 5 false negatives, 183 true positives, aligning with near-perfect accuracy)
+- **Observation:**
+  - Before Feature Selection: Both Decision Tree and Random Forest achieved perfect accuracy (1.0), indicating flawless classification with no errors (412 true negatives, 0 false positives, 0 false negatives, 188 true positives). k-NN performed significantly lower at 0.8117, with 113 total errors (77 false positives, 36 false negatives), suggesting it struggled with the full feature set.
+  - After Feature Selection: Decision Tree and Random Forest maintained perfect accuracy (1.0) with no errors, demonstrating robustness even with only the top 3 features. k-NN improved dramatically to 0.9833, reducing errors to 10 total (5 false positives, 5 false negatives), indicating feature selection greatly enhanced its performance.
+  - Feature selection had no negative impact on Decision Tree and Random Forest, which remained perfect, likely due to their ability to handle reduced features effectively. k-NN benefited significantly, with its accuracy jumping from 0.8117 to 0.9833, suggesting the top 3 features were highly discriminative and reduced noise or overfitting in the original dataset.
 
 ---
