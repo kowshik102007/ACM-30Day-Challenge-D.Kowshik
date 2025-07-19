@@ -39,10 +39,10 @@
 - `Day_02_Feature_Forge.ipynb`: Jupyter notebook with code and results.
   
 #### Summary: 
--**Model Training + Scores**:
+- **Model Training + Scores**:
   - Linear: MSE = 0.83, R² = 0.88
   - Ridge: MSE = 0.83, R² = 0.88
   - Lasso: MSE = 2.17, R² = 0.70
--For above mental_health_workplace_survey.csv the Linear model is the best, with an MSE of 0.83 and an R² of 0.88, and it’s tied with the Ridge model, which also got an MSE of 0.83 and an R² of 0.88. The Lasso model didn’t do as well, with an MSE of 2.17 and an R² of 0.70. Both Linear and Ridge are super good at predicting since they have the same low error and high R², meaning they match the data nicely. Linear takes the win because it’s simpler and skips the extra tweak Ridge adds, which didn’t help here. Lasso fell behind because it tries to zero out some features, which can leave out important info and mess up its predictions, leading to a higher MSE and lower R².
+- For above mental_health_workplace_survey.csv the Linear model is the best, with an MSE of 0.83 and an R² of 0.88, and it’s tied with the Ridge model, which also got an MSE of 0.83 and an R² of 0.88. The Lasso model didn’t do as well, with an MSE of 2.17 and an R² of 0.70. Both Linear and Ridge are super good at predicting since they have the same low error and high R², meaning they match the data nicely. Linear takes the win because it’s simpler and skips the extra tweak Ridge adds, which didn’t help here. Lasso fell behind because it tries to zero out some features, which can leave out important info and mess up its predictions, leading to a higher MSE and lower R².
 
 ---
