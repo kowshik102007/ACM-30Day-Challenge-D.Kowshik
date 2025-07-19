@@ -9,12 +9,11 @@
 
 
 #### How I Solved It:
-- Loaded the dataset with `pandas` and explored its shape (3000 rows, 25 columns) and data types using `df.info()`.
-- Used `df.isnull().sum()` to confirm no missing values, with a safety net of median/mode imputation.
-- Calculated `HoursPerDay` to check work hours and applied the IQR method to handle outliers, printing the number removed (0 in this case).
-- Generated the scatter plot with `seaborn` to visualize relationships, adding labels and a legend for clarity.
-
-## 📊 Dataset Used
+- **Initial Setup**: I began by importing the necessary libraries—`pandas` for data manipulation, `numpy` for numerical operations, and `matplotlib` and `seaborn` for visualization—into my Jupyter notebook environment. This set the foundation for a smooth workflow.
+- **Data Loading and Exploration**: I loaded the `mental_health_workplace_survey.csv` dataset using `pd.read_csv(file)` and used `df.head()` to get a quick look at the first five rows, followed by `df.shape` and `df.info()` to understand the dataset's dimensions (3000 rows, 25 columns) and data types (mix of integers, floats, and objects).
+- **Missing Value Check**: To ensure data integrity, I ran `df.isnull().sum()` to confirm there were no missing values across all 25 columns. As a proactive step, I implemented a fallback strategy using a loop to fill numerical columns with their median and categorical columns with their mode using `df.fillna()`, though it wasn’t needed this time.
+- **Outlier Detection and Handling**: I calculated `HoursPerDay` by dividing `WorkHoursPerWeek` by 7 to convert weekly hours into a daily context, which helped identify potential work hour extremes. I then defined a custom `remove_outliers_IQR` function to apply the Interquartile Range (IQR) method on `HoursPerDay`, `SleepHours`, and `StressLevel`. This function calculated Q1, Q3, and the IQR, setting bounds to filter out values beyond 1.5 * IQR. I iterated over the features, applied the function, and printed the number of outliers removed (0 in this case), ensuring the dataset remained intact but ready for future adjustments.
+- **Visualization Creation**: For the EDA, I used `seaborn.scatterplot()` to plot `SleepHours` against `StressLevel`, coloring points by `BurnoutRisk` with a `coolwarm` palette. This revealed a clear pattern where lower sleep and higher stress aligned with burnout risk, providing an early insight into employee well-being trends.
 
 - **Mental Health and Burnout in the Workplace** – Kaggle  
   [https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace](https://www.kaggle.com/datasets/khushikyad001/mental-health-and-burnout-in-the-workplace)
