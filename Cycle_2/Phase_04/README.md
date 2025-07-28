@@ -31,9 +31,6 @@
 
 ## 📊 Dataset Used
 - **20 Newsgroups Dataset** – Sourced from `scikit-learn`’s `fetch_20newsgroups` (also available on [Kaggle](https://www.kaggle.com/datasets/crawford/20-newsgroups)).
-  - Contains 18,846 text documents across 20 newsgroup categories, covering topics like technology, sports, and politics.
-  - Each document is a labeled newsgroup post.
-
 ## 🧰 Tools & Libraries Used
 | Task                     | Tools / Libraries                          |
 |--------------------------|--------------------------------------------|
